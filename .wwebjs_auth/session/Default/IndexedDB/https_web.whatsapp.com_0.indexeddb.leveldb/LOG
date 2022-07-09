@@ -1,0 +1,14 @@
+2022/07/08-22:30:03.257 6464 Reusing MANIFEST C:\Users\Allex\OneDrive\Área de Trabalho\bozap\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/07/08-22:30:03.258 6464 Recovering log #6
+2022/07/08-22:30:03.430 6464 Reusing old log C:\Users\Allex\OneDrive\Área de Trabalho\bozap\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000006.log 
+2022/07/08-22:30:03.430 6464 Delete type=2 #5
+2022/07/08-22:30:03.430 6464 Delete type=2 #7
+2022/07/08-22:30:13.748 67a8 Level-0 table #11: started
+2022/07/08-22:30:13.769 67a8 Level-0 table #11: 1197126 bytes OK
+2022/07/08-22:30:13.771 67a8 Delete type=0 #6
+2022/07/08-22:30:14.622 6464 Compacting 1@1 + 1@2 files
+2022/07/08-22:30:14.677 6464 Generated table #12@1: 27748 keys, 1784541 bytes
+2022/07/08-22:30:14.677 6464 Compacted 1@1 + 1@2 files => 1784541 bytes
+2022/07/08-22:30:14.678 6464 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/07/08-22:30:14.679 6464 Delete type=2 #8
+2022/07/08-22:30:14.679 6464 Delete type=2 #11
