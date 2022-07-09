@@ -17,13 +17,13 @@ client.on('ready', () => {
 client.on('message', async message => {
     const content = message.body
     const chat = await message.getChat() 
-
+    const me = message.fromMe
 
     if(content === '!cat') {
     const urlCat = await axios.get('https://api.thecatapi.com/v1/images/search').then(res => res.data[0].url)
     const media = await MessageMedia.fromUrl(urlCat)
     chat.sendMessage(media)
-} else if ( message.reply === '!cat') {
+} else if ( me === '!cat') {
     const urlCat = await axios.get('https://api.thecatapi.com/v1/images/search').then(res => res.data[0].url)
     const media = await MessageMedia.fromUrl(urlCat)
     chat.sendMessage(media)
