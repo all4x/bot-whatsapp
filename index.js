@@ -23,9 +23,15 @@ client.on('message', async message => {
     const urlCat = await axios.get('https://api.thecatapi.com/v1/images/search').then(res => res.data[0].url)
     const media = await MessageMedia.fromUrl(urlCat)
     chat.sendMessage(media)
-
-
+} else if ( message.fromMe === '!cat') {
+    const urlCat = await axios.get('https://api.thecatapi.com/v1/images/search').then(res => res.data[0].url)
+    const media = await MessageMedia.fromUrl(urlCat)
+    chat.sendMessage(media)
 }
+
+
+
+
 })
 
 
