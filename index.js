@@ -1,6 +1,8 @@
 const { default: axios } = require('axios');
-const { Client, LocalAuth, MessageMedia, ChatTypes } = require('whatsapp-web.js');
+const { Client, LocalAuth, MessageMedia,  } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
+const Util = require('./node_modules/whatsapp-web.js/src/util/Util')
+
 
 const client = new Client({
     authStrategy: new LocalAuth()
@@ -17,22 +19,14 @@ client.on('ready', () => {
 client.on('message', async message => {
     const content = message.body
     const chat = await message.getChat() 
-    const me =  message.fromMe
 
-    try{ (content === '!cat')
+
+
+    if (content === '!cat') {
     const urlCat = await axios.get('https://api.thecatapi.com/v1/images/search').then(res => res.data[0].url)
-    const media = await MessageMedia.fromUrl(urlCat)
-    chat.sendMessage(media)
-
-} catch{  ( me === 'gatito')
-    const urlCat = await axios.get('https://api.thecatapi.com/v1/images/search').then(res => res.data[0].url)
-    const media = await MessageMedia.fromUrl(urlCat)
-    chat.sendMessage(media)
-}
-
-
-
-
+    const typeMessageMedia = await MessageMedia.fromUrl(urlCat)
+    chat.sendMessage(typeMessageMedia)
+    }
 })
 
 
